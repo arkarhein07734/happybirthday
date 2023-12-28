@@ -13,7 +13,7 @@
         margin: 0; /* Remove default margin */
     }
     .container {
-        width: 100%; /* Adjust container width to 100% */
+        width: 600px; /* Adjust container width to 100% */
         background-color: pink;
         box-shadow: 0 5px 10px gray;
         padding: 10px; /* Add some padding */
@@ -25,7 +25,7 @@
     }
 
     .container img {
-        width: 100%; /* Make the image responsive */
+/*        width: 100%; Make the image responsive*/
         max-width: 300px; /* Set a maximum width */
         display: block;
         margin-left: auto;
@@ -39,11 +39,11 @@
         padding: 10px;
     }
 
-    @media only screen and (min-width: 600px) {
-        /* Apply styles for screens wider than 600px */
+   /* @media only screen and (min-width: 600px) {
+         Apply styles for screens wider than 600px 
         .container {
             width: 80%;
-        }
+        }*/
 
         .container h1 {
             font-size: 24px; /* Adjust font size for larger screens */
@@ -51,6 +51,14 @@
 
         p {
             font-size: 20px; /* Adjust font size for larger screens */
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     }
     </style>
@@ -67,14 +75,24 @@
                 စိတ်ကျန်းမာ ကိုယ်ချမ်းသာပြီး ဘေးရန်ခပ်သိမ်းအေးငြိမ်းပါစေ။
             </p>
         </div>
-        <audio id="myAudio" src="./song.mp3" type="audio/mp3" autoplay loop></audio>
-        <button onclick="playAudio()">Play Audio</button>
+        <iframe
+        id="video-background"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/uyWt8NV53r0?autoplay=1&loop=1&playlist=uyWt8NV53r0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+    ></iframe>
+        <!-- <audio id="myAudio" src="./song.mp3" type="audio/mp3" autoplay loop></audio>
+        <button onclick="playAudio()">Play Audio</button> -->
     </div>
-    <script>
+    <!-- <script>
         function playAudio() {
             var audio = document.getElementById("myAudio");
             audio.play();
         }
-    </script>
+    </script> -->
 </body>
 </html>
